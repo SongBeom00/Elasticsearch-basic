@@ -5,12 +5,14 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+// 인덱스(테이블) 생성
 @Document(indexName = "users")
 public class UserDocument {
 
     @Id
     private String id;
 
+    // Field 데이터 타입 선언
     @Field(type = FieldType.Keyword)
     private String name;
 
